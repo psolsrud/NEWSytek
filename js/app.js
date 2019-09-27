@@ -1,20 +1,35 @@
 var selection;
 var selectedLayer;
 
-L.mapbox.accessToken = 'pk.eyJ1Ijoid3RnZW9ncmFwaGVyIiwiYSI6ImNpdGFicWJqYjAwdzUydHM2M2g0MmhsYXAifQ.oO-MYNUC2tVeXa1xYbCIyw';
-var map = L.mapbox.map('map');
-//set initial view
-map.setView([45.74172, -95.943603], 12);
+L.mapbox.accessToken = 'pk.eyJ1IjoicHNvbHNydWQiLCJhIjoiY2pwZDIzZndjM2RhNDNwbzFhMGt1eDNuaiJ9.lQ5fHmv-vd8z25m4nTdSlQ';
+
+var map = L.mapbox.map('map').setView([45.74172, -95.943603], 12);
+
+var geocoder = L.mapbox.geocoder('mapbox.places'); //,map = null;
+
+function showMap(err, data) {
+    // The geocoder can return an area, like a city, or a
+    // point, like an address. 
+    if (data.lbounds) {
+        map.fitBounds(data.lbounds);
+    } else if (data.latlng) {
+        map.setView([data.latlng[0], data.latlng[1]], 13);
+    }
+}
+
+$(document).on("keypress", "input", function(e){
+    if(e.which == 13){
+        var text = document.getElementById('userSearch').value;
+        if (text.length >= 5) {
+            geocoder.query(text, showMap);
+        }
+    }
+});
 
 L.control.layers({
     'Mapbox Streets': L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11').addTo(map),
-    'Mapbox Satellite':  L.mapbox.styleLayer('mapbox://styles/mapbox/satellite-streets-v9'),
+    'Mapbox Satellite': L.mapbox.styleLayer('mapbox://styles/mapbox/satellite-streets-v9'),
 }).addTo(map);
-
-
-
-
-
 
 // Set style function that sets fill color property
 // define the styles for the my layer (unselected and selected)
@@ -34,7 +49,7 @@ function myStyle(feature) {
 function mySelectedStyle(feature) {
     return {
         fillColor: 'gray',
-        color:  'gray',
+        color: 'gray',
         fillOpacity: .2
     };
 }
@@ -93,7 +108,7 @@ function polygonClick(e) {
     $(".digital_tv").empty();
     $(".phone").empty();
     $(".home_automation").empty();
-    $(".btn-success").remove();
+    $(".btn-custom").remove();
 
 
     $(".title").prepend('Available Services');
@@ -101,7 +116,7 @@ function polygonClick(e) {
     $(".digital_tv").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_20ebd546c5524639a900e589108450e5~mv2.png/v1/fill/w_188,h_188,al_c/aee650_20ebd546c5524639a900e589108450e5~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.digital_tv + '</div>');
     $(".phone").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_0d4fdf26e061469dba4e8f2a83d81147~mv2.png/v1/fill/w_188,h_188,al_c/aee650_0d4fdf26e061469dba4e8f2a83d81147~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.phone + '</div>');
     $(".home_automation").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_7d28d8b31fb849b1aaf528ca5296ea06~mv2.png/v1/fill/w_188,h_188,al_c/aee650_7d28d8b31fb849b1aaf528ca5296ea06~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.home_autom + '</div>');
-    $("#service-modal .modal-footer").prepend('<a class="btn btn-success center" href="' + feature.properties.url + '" target="_blank" role="button">Learn More</a>');
+    $("#service-modal .modal-footer").prepend('<a class="btn btn-custom center-block" href="' + feature.properties.url + '" target="_blank" role="button">Learn More</a>');
 }
 
 // Null variable that will hold layer
@@ -126,9 +141,9 @@ setTimeout(function () {
 }, 500);
 
 
-var map = L.map('map').setView([38.83, -98.5], 7);
-L.esri.basemapLayer('Gray').addTo(map);
+// var map = L.map('map').setView([38.83, -98.5], 7);
+// L.esri.basemapLayer('Gray').addTo(map);
 
-var url = 'https://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Petroleum/KGS_OilGasFields_Kansas/MapServer';
+// var url = 'https://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Petroleum/KGS_OilGasFields_Kansas/MapServer';
 
 
