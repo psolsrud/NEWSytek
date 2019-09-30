@@ -63,7 +63,7 @@ html, body {
     -webkit-border-radius: 20px !important;
     -moz-border-radius: 20px !important;
     border-radius: 20px !important;
-    overflow-x:hidden;
+    overflow-x:auto;
     overflow-y:auto
 }
 
