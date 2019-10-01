@@ -3,7 +3,7 @@ var selectedLayer;
 
 L.mapbox.accessToken = 'pk.eyJ1IjoicHNvbHNydWQiLCJhIjoiY2pwZDIzZndjM2RhNDNwbzFhMGt1eDNuaiJ9.lQ5fHmv-vd8z25m4nTdSlQ';
 
-var map = L.mapbox.map('map').setView([45.74172, -95.943603], 12);
+var map = L.mapbox.map('map').setView([45.74172, -95.943603], 19);
 
 var geocoder = L.mapbox.geocoder('mapbox.places'); //,map = null;
 
