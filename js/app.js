@@ -40,9 +40,9 @@ function myStyle(feature) {
         // color: '#B04173',
         fillColor: 'gray',
         weight: 2,
-        opacity: .5,
-        color: 'black',  //Outline color
-        fillOpacity: .2
+        opacity: .1, //Outline opacity
+        color: 'gray',  //Outline color
+        fillOpacity: .1
     };
 }
 
@@ -111,11 +111,14 @@ function polygonClick(e) {
     $(".btn-custom").remove();
 
 
+
+    //comment out the following services that don't apply to the provider, to change service names and descriptions, update geojson
+
     $(".title").prepend('Available Services');
     $(".speed").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_f58d71badf48432bbd277b61d9314ba2~mv2.png/v1/fill/w_188,h_188,al_c/aee650_f58d71badf48432bbd277b61d9314ba2~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.speed + ' </div>');
-    $(".digital_tv").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_20ebd546c5524639a900e589108450e5~mv2.png/v1/fill/w_188,h_188,al_c/aee650_20ebd546c5524639a900e589108450e5~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.digital_tv + '</div>');
+    //$(".digital_tv").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_20ebd546c5524639a900e589108450e5~mv2.png/v1/fill/w_188,h_188,al_c/aee650_20ebd546c5524639a900e589108450e5~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.digital_tv + '</div>');
     $(".phone").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_0d4fdf26e061469dba4e8f2a83d81147~mv2.png/v1/fill/w_188,h_188,al_c/aee650_0d4fdf26e061469dba4e8f2a83d81147~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.phone + '</div>');
-    $(".home_automation").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_7d28d8b31fb849b1aaf528ca5296ea06~mv2.png/v1/fill/w_188,h_188,al_c/aee650_7d28d8b31fb849b1aaf528ca5296ea06~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.home_autom + '</div>');
+    //$(".home_automation").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_7d28d8b31fb849b1aaf528ca5296ea06~mv2.png/v1/fill/w_188,h_188,al_c/aee650_7d28d8b31fb849b1aaf528ca5296ea06~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.home_autom + '</div>');
     $("#service-modal .modal-footer").prepend('<a class="btn btn-custom center-block" href="' + feature.properties.url + '" target="_blank" role="button">Learn More</a>');
 }
 
