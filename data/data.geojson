@@ -11,7 +11,7 @@
 
 
 
-{ "type": "Feature", "properties": { "speed": "Fiber-Optic Internet - 1 Gigabit", "phone": "Unlimited local and long distance ", "digital_tv": "250+ Digital TV channels", "home_autom": "Home Automation",  "url": "https://www.sytekcom.com/" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [
+{ "type": "Feature", "properties": { "speed": "Fiber-Optic Internet - 1 Gigabit", "phone": "Unlimited local and long distance ", "digital_tv": "250+ Digital TV channels", "home_autom": "Home Automation",  "url": "https://www.sytekcom.com/?zone=clec-limited" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [
               -94.5399284362793,
               45.95753461077106
             ],
