@@ -1,1 +1,1 @@
-web: gunicorn myapp.wsgi —-log-file -
+web: vendor/bin/heroku-php-apache2

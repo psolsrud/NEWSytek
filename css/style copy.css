@@ -1,0 +1,110 @@
+/* html, body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: #15253b;
+    zoom used soley for heroku deployment
+    zoom: 1.0;
+} */
+
+html, body {
+    margin: 0;
+    padding: 25px 0px 0px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    /* zoom used solely for heroku deployment */
+    zoom: 1.0;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+#map {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-header {
+    background-color: #ffffff;
+    /*added rounded corners*/
+    /* -webkit-border-radius: 30px !important;
+    -moz-border-radius: 30px !important; */
+    /* border-radius: 30px;  */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.modal {
+    /* position: fixed; */
+    /* top: 50%; */
+    /* left: 50%; */
+    z-index: 1050;
+    /* width: fit-content; */
+    /* margin: -250px 0 0 -400px; */
+    overflow: auto;
+    box-shadow: #2e3133;
+    max-width: 80%;
+    margin: auto;
+}
+
+/*this add rounded modal corners*/
+
+.modal-content {
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    border-radius: 20px !important;
+}
+
+.title {
+    color: rgb(68, 65, 65);
+    font-weight: 150;
+    font-size: 20px;
+}
+
+.product-content {
+    color: #2e3133;
+    font-weight: 150;
+    font-size: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.list-group-item {
+    border: none;
+}
+
+.btn-custom {
+    background-color: #1B4F8C;
+    /* box-shadow: 2px 2px #c0c0c0; */
+    width: 50%;
+    color: white;
+    font-size: 15px;
+}
+
+.btn-custom:hover {
+    background-color: #c0c0c0;
+    /* box-shadow: 2px 2px #c0c0c0; */
+    width: 50%;
+    color: white;
+    font-size: 15px;
+}
+
+#search_group {
+    margin-top: 8px;
+}
+
+input[type=text] {
+    width: 175px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
