@@ -13,10 +13,11 @@ function showMap(err, data) {
     // point, like an address.
 
     drawnItems.clearLayers();
-    if (data.lbounds) {
+
+    if (data.latlng) {
+        map.setView([data.latlng[0], data.latlng[1]], 13);
+    } else if (data.lbounds) {
         map.fitBounds(data.lbounds);
-    } else if (data.latlng) {
-        map.setView([data.latlng[0], data.latlng[1]], 19);
     }
 
     if (data.latlng) {
@@ -39,7 +40,25 @@ function showMap(err, data) {
 
     $('#search-modal').modal('hide');
 
-    L.geoJson(data['results'], {onEachFeature: forEachMarker}).addTo(drawnItems);
+    // L.geoJson(data['results'], {onEachFeature: forEachMarker}).addTo(drawnItems);
+    if (data.latlng) {
+        L.marker(data.latlng).on('click', function(event) {
+            var feature = null;
+            polygons.eachLayer(function (polyLayer) {
+                polyLayer.eachLayer(function (poly) {
+                    if (isMarkerInsidePolygon(data.latlng, poly)) {
+                        feature = poly.feature;
+                    }
+                });
+            });
+            if (feature)
+                serviceModel(feature);
+            else
+                $('#no-service-modal').modal({
+                    show: 'true'
+                });
+        }).addTo(drawnItems);
+    }
 }
 
 L.control.layers({
