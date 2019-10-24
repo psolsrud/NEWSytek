@@ -182,7 +182,7 @@ function serviceModel(feature) {
     //comment out the following services that don't apply to the provider, to change service names and descriptions, update geojson
 
     $(".title").prepend('Available Services');
-    $(".speed").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_e9aef2187fc2461895dcea75419f37cb~mv2_d_3517_3350_s_4_2.png/v1/fill/w_66,h_65,al_c,q_80,usm_0.66_1.00_0.01/Sytek%20Icons-01.webp" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;<span>' + feature.properties.speed + '</span></div>');
+    $(".speed").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_f58d71badf48432bbd277b61d9314ba2~mv2.png/v1/fill/w_188,h_188,al_c/aee650_f58d71badf48432bbd277b61d9314ba2~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;<span>' + feature.properties.speed + '</span></div>');
     //$(".digital_tv").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_20ebd546c5524639a900e589108450e5~mv2.png/v1/fill/w_188,h_188,al_c/aee650_20ebd546c5524639a900e589108450e5~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.digital_tv + '</div>');
     $(".phone").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_0d4fdf26e061469dba4e8f2a83d81147~mv2.png/v1/fill/w_188,h_188,al_c/aee650_0d4fdf26e061469dba4e8f2a83d81147~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;<span>' + feature.properties.phone + '</span></div>');
     //$(".home_automation").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_7d28d8b31fb849b1aaf528ca5296ea06~mv2.png/v1/fill/w_188,h_188,al_c/aee650_7d28d8b31fb849b1aaf528ca5296ea06~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.home_autom + '</div>');
@@ -257,10 +257,5 @@ $(document).ready(function(){
         if (text.length >= 5) {
             geocoder.query(text, showMap);
         }
-
-
-
-
-
     });
 });
