@@ -8,7 +8,7 @@
 
 
 
-{ "type": "Feature", "properties": { "name": "Sytek Office Location", "speed": "Fiber-Optic Internet - 1 Gigabit", "phone": "Local and long distance ", "digital_tv": "250+ Digital TV channels", "home_autom": "Home Automation",  "url": "https://www.sytekcom.com/?zone=ilec" }, "geometry": { "type": "point", "coordinates": [ [ [ [
+{ "type": "Feature", "properties": { "name": "Sytek Office", "speed": "Fiber-Optic Internet - 1 Gigabit", "phone": "Local and long distance ", "digital_tv": "250+ Digital TV channels", "home_autom": "Home Automation",  "url": "https://www.sytekcom.com/?zone=ilec" }, "geometry": { "type": "point", "coordinates": [ [ [ [
               -94.5452781520983,
               45.917867040779775
             ],
@@ -630,6 +630,17 @@
               -94.53637719154358,
               45.9507021176954
             ]] ] ] } }
+
+
+
+
+            
+
+
+
+
+
+
 
 
 ]
