@@ -5,6 +5,7 @@
 "features": [
 
 
+
 { "type": "Feature", "properties": { "name": "Upsala ILEC", "speed": "Fiber-Optic Internet - 1 Gigabit", "phone": "Local and long distance ", "digital_tv": "250+ Digital TV channels", "home_autom": "Home Automation",  "url": "https://www.sytekcom.com/?zone=ilec" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [
               -94.5452781520983,
               45.917867040779775

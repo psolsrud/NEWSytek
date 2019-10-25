@@ -81,11 +81,12 @@ function myStyle(feature) {
     };
 }
 
+
 function mySelectedStyle(feature) {
     return {
         fillColor: 'gray',
         color: 'gray',
-        fillOpacity: .2
+        fillOpacity: .1
     };
 }
 
