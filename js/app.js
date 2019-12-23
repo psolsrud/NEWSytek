@@ -29,7 +29,7 @@ function showMap(err, data) {
                 }
             });
         });
-
+ 
         if (feature)
             serviceModel(feature);
         else
