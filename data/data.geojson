@@ -358,6 +358,16 @@
             ]] ] ] } },
 
 
+
+             { "type": "Feature", "properties": { "name": "Flensburg Route", "speed": "Fiber-Optic Internet - 1 Gigabit", "phone": "Unlimited local and long distance ", "digital_tv": "250+ Digital TV channels", "home_autom": "Home Automation",  "url": "https://www.sytekcom.com/?zone=flensburg_route" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [
+              -94.5414327266751,45.9161236543487],[-94.5410893905735,45.9298261878441],[-94.5466255280065,45.9299157235032],[-94.5389007352153,45.94459961493],[-94.5325492868304,45.9472554243923],[-94.5325063473599,45.9508361121069],[-94.5298884769589,45.9508958215865],[-94.5272277569188,45.9511643260766],[-94.5248244940392,45.9434656196095],[-94.5275710930204,45.9429284722738],[-94.5298456273198,45.9428986757173],[-94.5295452306888,45.9107492357646],[-94.5356391320817,45.9119435890392],[-94.5356820715523,45.9134663537515],[-94.5414327266751,45.9161236543487]] ] ] } },
+
+            { "type": "Feature", "properties": { "name": "SE Bowlus Extension", "speed": "Fiber-Optic Internet - 1 Gigabit", "phone": "Local and long distance ", "digital_tv": "250+ Digital TV channels", "home_autom": "Home Automation",  "url": "https://www.sytekcom.com/?zone=bowlus_SE_Extension" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ 
+              [-94.4406223481867,45.7875358048163],[-94.4407566463217,45.792192561013],[-94.4259077641698,45.7923835384041],[-94.4254570793918,45.7859347298927],[-94.428203678373,45.7825529586785],[-94.4405847986079,45.7859197581624],[-94.4406223481867,45.7875358048163]] ] ] } },
+
+
+
+
             { "type": "Feature", "properties": { "name": "Bowlus-west", "speed": "Fiber-Optic Internet - 1 Gigabit", "phone": "Unlimited local and long distance ", "digital_tv": "250+ Digital TV channels", "home_autom": "Home Automation",  "url": "https://www.sytekcom.com/?zone=bowlus-west" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [
               
               -94.43480730056763,
